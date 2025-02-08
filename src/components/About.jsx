@@ -1,7 +1,12 @@
 import Carousel from 'react-multi-carousel'
 import 'react-multi-carousel/lib/styles.css'
-import slide1 from '../assets/slide1.jpg' // Adicione outras imagens conforme necessário
+import slide1 from '../assets/slide1.jpg'
 import slide2 from '../assets/slide2.jpg'
+import slide3 from '../assets/slide3.jpg'
+import slide4 from '../assets/slide4.jpg'
+import slide5 from '../assets/slide5.jpg'
+import slide6 from '../assets/slide6.jpg'
+import slide7 from '../assets/slide7.jpg'
 
 const responsive = {
   allDevices: {
@@ -11,7 +16,7 @@ const responsive = {
 }
 
 const About = () => (
-<section id="about" className="py-[64px]">
+  <section id="about" className="py-[64px]">
     <div className="container mx-auto">
       <div className="flex flex-col-reverse lg:grid lg:grid-cols-2 gap-8">
         <div className="flex flex-col justify-between">
@@ -23,12 +28,13 @@ const About = () => (
             levantamentos topográficos e agrimensura. Formada por profissionais
             altamente qualificados e experientes, com capacidade de oferecer
             serviços de qualidade e eficiência. <br /> <br />
-            Nossa empresa atua em diversos segmentos, como construção civil, georreferenciamento de imóveis rurais e urbanos, e medições para projetos ou regularização em Cartórios e Prefeituras, sempre conforme as normas e legislações vigentes.
-
+            Nossa empresa atua em diversos segmentos, como construção civil,
+            georreferenciamento de imóveis rurais e urbanos, e medições para
+            projetos ou regularização em Cartórios e Prefeituras, sempre
+            conforme as normas e legislações vigentes.
           </p>
           <a href="#history">
-            <button 
-              className="w-full mt-8 inline-flex items-center justify-center whitespace-nowrap font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-background hover:text-accent-foreground h-10 text-lg text-white border border-[#e69752] px-4 py-2 rounded-xl hover:font-bold bg-[#e69752] hover:bg-[#f3d354]">
+            <button className="w-full mt-8 inline-flex items-center justify-center whitespace-nowrap font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-background hover:text-accent-foreground h-10 text-lg text-white border border-[#e69752] px-4 py-2 rounded-xl hover:font-bold bg-[#e69752] hover:bg-[#f3d354]">
               Conheça Nossa História
             </button>
           </a>
@@ -51,6 +57,31 @@ const About = () => (
             <img
               src={slide2}
               alt="Slide 2"
+              className="w-full h-full max-h-[400px] object-cover"
+            />
+            <img
+              src={slide3}
+              alt="Slide 3"
+              className="w-full h-full max-h-[400px] object-cover"
+            />
+            <img
+              src={slide4}
+              alt="Slide 4"
+              className="w-full h-full max-h-[400px] object-cover"
+            />
+            <img
+              src={slide5}
+              alt="Slide 5"
+              className="w-full h-full max-h-[400px] object-cover"
+            />
+            <img
+              src={slide6}
+              alt="Slide 6"
+              className="w-full h-full max-h-[400px] object-cover"
+            />
+            <img
+              src={slide7}
+              alt="Slide 7"
               className="w-full h-full max-h-[400px] object-cover"
             />
           </Carousel>
