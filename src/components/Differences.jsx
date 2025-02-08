@@ -71,7 +71,7 @@ const Differences = () => {
   };
 
   return (
-    <section className="flex flex-col justify-center items-center text-center py-[64px] px-2 m-auto">
+    <section id="differences" className="flex flex-col justify-center items-center text-center py-[64px] px-2 m-auto">
       <Carousel
         responsive={responsive}
         infinite={true}

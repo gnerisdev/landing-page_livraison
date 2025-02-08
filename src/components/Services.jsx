@@ -137,7 +137,7 @@ const Services = () => {
   return (
     <section id="services" className="flex flex-col justify-center items-center text-left py-[64px]">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-[#e69752] mb-4">SERVIÇOS</h2>
+        <h2 className="text-3xl font-bold text-[#e69752] mb-4 uppercase">Nossos Serviços</h2>
         <div className="w-full grid sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 flex-wrap gap-8 gap-x-7">
           {services.map((service, index) => {
             const items = modalContent.description.split('.').filter(item => item.trim());
@@ -178,12 +178,12 @@ const Services = () => {
                           href={createWhatsAppLink(service.name)}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="bg-[#e69752] text-white px-4 py-2 rounded-lg w-full"
+                          className="bg-[#e69752] text-white px-4 py-2 rounded-lg w-full flex items-center justify-center"
                         >
                           Solicitar Orçamento
                         </a>
                         <button
-                          className="bg-gray-500 text-white px-4 py-2 rounded-lg w-full basis-[60%]"
+                          className="bg-gray-500 text-white px-4 py-2 rounded-lg w-full basis-[60%] flex items-center justify-center"
                           onClick={handleCloseModal}
                         >
                           Fechar

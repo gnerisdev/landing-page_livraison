@@ -30,8 +30,8 @@ const Header = () => {
     <header
       className={`${
         isScrolled
-          ? 'fixed top-3 left-[50%] translate-x-[-50%] w-full'
-          : 'static !mt-4'
+          ? 'fixed top-3 left-[50%] translate-x-[-50.5%] w-[calc(100%+6px)]'
+          : 'fixed top-3 left-[50%] translate-x-[-50.5%] w-[calc(100%+6px)]'
       } z-[9999]`}
     >
       <div className="container">
@@ -40,8 +40,8 @@ const Header = () => {
             flex items-center justify-between h-24 md:gap-12 rounded-lg w-full
             ${
               isScrolled
-                ? 'px-6 from-zinc-900 backdrop-blur-md dark:border-neutral-800 dark:bg-neutral-900/75 dark:from-inherit'
-                : ''
+                ? 'px-3 from-zinc-900 backdrop-blur-md dark:border-neutral-800 dark:bg-neutral-900/75 dark:from-inherit'
+                : 'px-3'
             }
           `}
         >
@@ -78,7 +78,7 @@ const Header = () => {
 
           <a
             className="hidden md:block text-xs text-white border border-[#e69752] hover:bg-[#e69752] 
-            hover:font-bold px-4 py-2 rounded-lg transition duration-300"
+            hover:font-bold px-4 py-2 rounded-lg transition duration-300 text-center"
             href="#contato"
           >
             SOLICITAR ORÇAMENTO

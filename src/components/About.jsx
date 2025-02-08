@@ -11,7 +11,7 @@ const responsive = {
 }
 
 const About = () => (
-  <section className="py-[64px]">
+<section id="about" className="py-[64px]">
     <div className="container mx-auto">
       <div className="flex flex-col-reverse lg:grid lg:grid-cols-2 gap-8">
         <div className="flex flex-col justify-between">
@@ -37,7 +37,7 @@ const About = () => (
         <div className="flex items-center">
           <Carousel
             responsive={responsive}
-            infinite={false}
+            infinite={true}
             autoPlay={false}
             autoPlaySpeed={3000}
             transitionDuration={500}

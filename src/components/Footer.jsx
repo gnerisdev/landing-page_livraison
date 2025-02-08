@@ -22,17 +22,17 @@ const Footer = () => {
             <h4 className="text-lg font-semibold mb-4">A VFM Topografia</h4>
             <ul className="space-y-2">
               <li>
-                <a className="hover:text-[#e69752]" href="/sobre">
+                <a className="hover:text-[#e69752]" href="#about">
                   Sobre Nós
                 </a>
               </li>
               <li>
-                <a className="hover:text-[#e69752]" href="/servicos">
+                <a className="hover:text-[#e69752]" href="#services">
                   Serviços
                 </a>
               </li>
               <li>
-                <a className="hover:text-[#e69752]" href="/contato">
+                <a className="hover:text-[#e69752]" href="#contact">
                   Entre em contato
                 </a>
               </li>

@@ -1,51 +1,55 @@
-import Carousel from "react-multi-carousel";
-import "react-multi-carousel/lib/styles.css";
-import backgroundImg from "../assets/portrait-male-engineer-working.jpg";
-
-const responsive = {
-  superLargeDesktop: { breakpoint: { max: 4000, min: 1024 }, items: 1 },
-  desktop: { breakpoint: { max: 1024, min: 768 }, items: 1 },
-  tablet: { breakpoint: { max: 768, min: 464 }, items: 1 },
-  mobile: { breakpoint: { max: 464, min: 0 }, items: 1 },
-};
-
-const carouselItems = [
-  {
-    image: backgroundImg,
-    title: "MAPEAMENTO COM SCANNERS 3D",
-    description: "Trabalhamos com a exclusiva tecnologia do Laser Scanner 3D Matterport PRO3.",
-  },
-];
+import { motion } from "framer-motion";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
+import background from '../assets/portrait-male-engineer-working.jpg';
 
 const Hero = () => {
   return (
-    <section id="home" className="mt-6">
-      <div className="relative w-full max-w-screen-xl sm:py-12 sm:px-6 lg:px-8 container mx-auto py-[64px]">
-        <Carousel
-          responsive={responsive}
-          infinite={true}
-          autoPlay={false}
-          autoPlaySpeed={3000}
-          showDots={true}
-          arrows={true}
+    <section 
+      id="home" 
+      className="mt-0 h-[95vh] relative bg-center bg-cover flex items-center justify-center text-center px-6 sm:px-12"
+      style={{ backgroundImage: `url(${background})` }}
+    >
+      <div className="absolute inset-0 bg-[#000000a6]"></div>
+
+      <motion.div 
+        className="relative z-10 flex flex-col items-center text-white"
+        initial={{ opacity: 0, scale: 0.9 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 1.2, ease: "easeOut" }}
+      >
+        {/* Título animado */}
+        <motion.h2 
+          className="text-4xl lg:text-5xl font-bold text-[#f3d354] leading-tight max-w-[600px]"
+          initial={{ opacity: 0, y: -50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1.2, ease: "easeOut" }}
         >
-          {carouselItems.map((item, index) => (
-            <div key={index} className="relative w-full h-[260px] sm:h-[400px] lg:h-[472px] rounded-lg overflow-hidden">
-              <img
-                src={item.image}
-                alt={item.title}
-                className="object-cover w-full h-full"
-              />
-              <div className="absolute inset-0 bg-black bg-opacity-30 flex items-end justify-center lg:justify-end">
-                <div className="flex flex-col max-w-lg m-4 lg:m-8 text-center lg:text-left">
-                  <h2 className="text-xl sm:text-2xl lg:text-3xl font-black text-white">{item.title}</h2>
-                  <p className="text-xs sm:text-sm lg:text-md text-white mb-2 pr-8">{item.description}</p>
-                </div>
-              </div>
-            </div>
-          ))}
-        </Carousel>
-      </div>
+          Precisão e Tecnologia para Seu Projeto
+        </motion.h2>
+
+        {/* Descrição animada */}
+        <motion.p 
+          className="mt-3 text-lg sm:text-xl lg:text-2xl font-light max-w-[600px]"
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1.4, ease: "easeOut", delay: 0.3 }}
+        >
+          Levantamentos topográficos, georreferenciamento e medições para regularização.
+        </motion.p>
+      </motion.div>
+
+      {/* Setinha piscando suavemente */}
+      <motion.div 
+        className="absolute bottom-6 left-1/2 transform -translate-x-1/2"
+        initial={{ opacity: 0.3 }}
+        animate={{ opacity: [0.3, 1, 0.3] }} 
+        transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
+      >
+        <a href="#differences" className="text-[#f3d354] text-3xl">
+          <FontAwesomeIcon icon={faChevronDown} />
+        </a>
+      </motion.div>
     </section>
   );
 };
