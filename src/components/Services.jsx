@@ -154,7 +154,7 @@ const Services = () => {
                     {service.name}
                   </h2>
                   <button
-                    className="bg-[#72645f] w-full mt-8 inline-flex items-center justify-center whitespace-nowrap font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-background hover:text-accent-foreground h-10 text-lg text-white border border-[#72645f] px-4 py-2 rounded-xl hover:font-bold hover:bg-[#72645f]"
+                    className="bg-[#72645f] w-full mt-4 inline-flex items-center justify-center whitespace-nowrap font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-background hover:text-accent-foreground h-10 text-lg text-white border border-[#72645f] px-4 py-2 rounded-xl hover:font-bold hover:bg-[#72645f]"
                     onClick={() => handleOpenModal(service.name, service.description)}
                   >
                     Saiba mais

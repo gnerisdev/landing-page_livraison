@@ -1,4 +1,4 @@
-import backgroundImg from '../assets/pattern-malha.svg'
+import backgroundImg from '../assets/4048563.svg'
 
 const MainWrapper = ({ children }) => (
   <main 

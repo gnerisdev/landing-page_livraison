@@ -62,7 +62,21 @@ const Header = () => {
               <ul className="flex items-center gap-6 text-xs md:text-sm xl:text-md">
                 {itemsMenu.map(
                   (item, index) => (
-                    <li key={index}>
+                    <li 
+                      key={index}
+                      onClick={() => {
+                        setTimeout(() => {
+                          const targetElement = document.getElementById(item.link);
+                          if (!targetElement) return;
+                      
+                          const container = document.getElementById('container-main');
+                          if (!container) return;
+                      
+                          const targetPosition = targetElement.offsetTop - 70;
+                          container.scrollTo({ top: targetPosition, behavior: 'smooth' });
+                        }, 100);
+                      }}
+                    >
                       <a
                         className="text-white transition hover:text-[#e69752] dark:text-white dark:hover:text-[#e69752]"
                         href={`#${item.link}`}
@@ -79,7 +93,8 @@ const Header = () => {
           <a
             className="hidden md:block text-xs text-white border border-[#e69752] hover:bg-[#e69752] 
             hover:font-bold px-4 py-2 rounded-lg transition duration-300 text-center"
-            href="#contato"
+            href="https://api.whatsapp.com/send/?phone=5515996005455&amp;text=Ol%C3%A1%2C+gostaria+de+saber+mais+informa%C3%A7%C3%B5es+sobre+os+servi%C3%A7os+oferecidos.&amp;type=phone_number&amp;app_absent=0"
+            target='_blank'
           >
             SOLICITAR ORÇAMENTO
           </a>
@@ -117,7 +132,22 @@ const Header = () => {
           >
             <ul className="flex flex-col items-center justify-center space-y-4 w-full">
               {itemsMenu.map((item, index) => (
-                <li key={index} className="w-full text-center">
+                <li 
+                  key={index} className="w-full text-center"
+                  onClick={() => {
+                    setIsMenuOpen(false);                    
+                    setTimeout(() => {
+                      const targetElement = document.getElementById(item.link);
+                      if (!targetElement) return;
+                  
+                      const container = document.getElementById('container-main');
+                      if (!container) return;
+                  
+                      const targetPosition = targetElement.offsetTop - 70;
+                      container.scrollTo({ top: targetPosition, behavior: 'smooth' });
+                    }, 100);
+                  }}
+                >
                   <a
                     className="text-white hover:text-[#e69752] transition duration-300 block py-2"
                     href={`#${item.link}`}
@@ -129,7 +159,8 @@ const Header = () => {
             </ul>
             <a
               className="text-xs border border-[#f3d354] hover:bg-[#e69752] hover:font-bold px-4 py-3 rounded-lg transition duration-300 w-full text-center text-white"
-              href="#contato"
+              href="https://api.whatsapp.com/send/?phone=5515996005455&amp;text=Ol%C3%A1%2C+gostaria+de+saber+mais+informa%C3%A7%C3%B5es+sobre+os+servi%C3%A7os+oferecidos.&amp;type=phone_number&amp;app_absent=0"
+              target='_blank'
             >
               SOLICITAR ORÇAMENTO
             </a>
