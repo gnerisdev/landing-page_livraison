@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCogs, faUsers, faHandshake, faCalendarCheck, faLeaf, faGlobe } from "@fortawesome/free-solid-svg-icons";
+import { faChartLine, faShieldAlt, faThumbsUp, faTruck, faUsers } from "@fortawesome/free-solid-svg-icons";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 
@@ -9,36 +9,66 @@ const Differences = () => {
   const [modalContent, setModalContent] = useState({ title: "", description: "" });
   const items = [
     {
-      title: "Tecnologia de Ponta",
-      description: "Utilização de equipamentos modernos e precisos, como estações totais, GPS de alta precisão, drones para mapeamento aéreo e softwares avançados de processamento de dados.",
-      icon: faCogs
+      title: "AMÉLIORE LA QUALITÉ DE LA LIVRAISON",
+      description: "Optimisez vos processus pour garantir une livraison rapide et de qualité.",
+      icon: faTruck,
     },
     {
-      title: "Equipe Qualificada",
-      description: "Profissionais altamente capacitados, como engenheiros cartógrafos, agrimensores e técnicos em topografia, com vasta experiência no mercado.",
-      icon: faUsers
+      title: "AUGMENTATION DE VOTRE DEMANDE",
+      description: "Stimulez la demande avec des solutions adaptées à vos clients.",
+      icon: faChartLine,
     },
     {
-      title: "Atendimento Personalizado",
-      description: "Foco nas necessidades específicas de cada cliente, oferecendo soluções sob medida para projetos urbanos, rurais, ambientais ou industriais.",
-      icon: faHandshake
+      title: "EFFICACITÉ GARANTIE",
+      description: "Assurez-vous d'une exécution rapide et sans erreurs de vos processus.",
+      icon: faThumbsUp,
     },
     {
-      title: "Compromisso com Prazos",
-      description: "Cumprimento rigoroso dos prazos estabelecidos, sem abrir mão da qualidade e precisão dos serviços.",
-      icon: faCalendarCheck
+      title: "SÉCURITÉ RENFORCÉE",
+      description: "Renforcez la sécurité de vos données et de vos livraisons.",
+      icon: faShieldAlt,
     },
     {
-      title: "Sustentabilidade",
-      description: "Adoção de práticas sustentáveis nos processos de trabalho, minimizando impactos ambientais.",
-      icon: faLeaf
+      title: "SATISFACTION DU CLIENT",
+      description: "Offrez une expérience client inégalée, favorisant leur fidélité.",
+      icon: faUsers,
     },
     {
-      title: "Cobertura de Serviços",
-      description: "Diversificação de serviços, como topografia para construção civil, regularização fundiária, levantamentos planialtimétricos, monitoramento de obras, mapeamento com drones e consultoria técnica.",
-      icon: faGlobe
+      title: "OPTIMISATION DES COÛTS",
+      description: "Réduisez les coûts opérationnels tout en améliorant les performances.",
+      icon: faChartLine,
     },
-  ];
+    {
+      title: "INNOVATION CONTINUE",
+      description: "Adoptez des technologies novatrices pour vous démarquer de la concurrence.",
+      icon: faThumbsUp,
+    },
+    {
+      title: "SUPPORT CLIENT DÉDIÉ",
+      description: "Bénéficiez d'une assistance client disponible 24/7 pour résoudre tous les problèmes.",
+      icon: faUsers,
+    },
+    {
+      title: "TRAÇABILITÉ EN TEMPS RÉEL",
+      description: "Suivez l'évolution de vos livraisons et demandes en temps réel.",
+      icon: faTruck,
+    },
+    {
+      title: "FACILITÉ D'UTILISATION",
+      description: "Profitez d'une interface intuitive et facile à utiliser pour tous vos besoins.",
+      icon: faShieldAlt,
+    },
+    {
+      title: "SERVICES PERSONNALISÉS",
+      description: "Bénéficiez de solutions adaptées à vos besoins spécifiques.",
+      icon: faUsers,
+    },
+    {
+      title: "GESTION SIMPLIFIÉE",
+      description: "Rationalisez vos opérations pour une gestion plus fluide et efficace.",
+      icon: faChartLine,
+    },
+  ];  
 
   const handleOpenModal = (title, description) => {
     setModalContent({ title, description });
@@ -90,7 +120,7 @@ const Differences = () => {
             onClick={() => handleOpenModal(item.title, item.description)}
           >
             <div className="h-[90px] flex items-center">
-              <FontAwesomeIcon icon={item.icon} size="3x" className="text-[#e69752]" />
+              <FontAwesomeIcon icon={item.icon} size="3x" className="text-[#D72638]" />
             </div>
             <h2 className="text-xl font-black text-white mb-2 mt-2">{item.title}</h2>
             <p className="text-gray-400 text-sm line-clamp-3">{item.description}</p>

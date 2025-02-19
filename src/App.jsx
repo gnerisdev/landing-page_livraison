@@ -10,6 +10,7 @@ import Message from './components/Message';
 import ButtonWhatsapp from './components/ButtonWhatsapp';
 import Footer from './components/Footer';
 import History from './components/History';
+import Brands from './components/Brands';
 
 const App = () => {
   return (
@@ -17,9 +18,10 @@ const App = () => {
       <Header />
       <Hero />
       <Differences />
-      <About />
       <Services />
       <History />
+      <Brands />
+      <About />
       <Address />
       <Message />
       <ButtonWhatsapp />

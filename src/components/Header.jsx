@@ -1,13 +1,13 @@
 import { useEffect, useState } from 'react'
-import logo from '../assets/LogoVFM-1.png'
+import logo from '../assets/images/logo-1.png'
 
 const Header = () => {
   const itemsMenu = [
-    { name: 'Home', link: 'home' },
-    { name: 'História', link: 'history' },
-    { name: 'Serviços', link: 'services' },
-    { name: 'Endereço', link: 'address' },
-    { name: 'Contato', link: 'message' },
+    { name: 'Accueil', link: 'home' },
+    { name: 'Histoire', link: 'history' },
+    { name: 'Services', link: 'services' },
+    { name: 'Adresse', link: 'address' },
+    { name: 'Contact', link: 'message' },
   ]
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -47,7 +47,7 @@ const Header = () => {
         >
           <a href="/">
             <img
-              alt="VFM Topografia Logo"
+              alt="Logo Livraison Totale"
               fetchPriority="high"
               className="w-auto sm:h-[70px] h-[50px]"
               src={logo}
@@ -78,7 +78,7 @@ const Header = () => {
                       }}
                     >
                       <a
-                        className="text-white transition hover:text-[#e69752] dark:text-white dark:hover:text-[#e69752]"
+                        className="text-white transition hover:text-[#b4000d] dark:text-white dark:hover:text-[#b4000d]"
                         href={`#${item.link}`}
                       >
                         {item.name}
@@ -91,17 +91,17 @@ const Header = () => {
           </div>
 
           <a
-            className="hidden md:block text-xs text-white border border-[#e69752] hover:bg-[#e69752] 
-            hover:font-bold px-4 py-2 rounded-lg transition duration-300 text-center"
-            href="https://api.whatsapp.com/send/?phone=5515996005455&amp;text=Ol%C3%A1%2C+gostaria+de+saber+mais+informa%C3%A7%C3%B5es+sobre+os+servi%C3%A7os+oferecidos.&amp;type=phone_number&amp;app_absent=0"
+            className="hidden md:block text-xs text-white border border-[#b4000d] bg-[#b4000d] hover:bg-[#b4000d] 
+            hover:font-bold px-4 py-2 rounded-lg transition duration-300 text-center font-bold"
+            href="https://api.whatsapp.com/send/?phone=32467771070&amp;text=Bonjour%2C+je+voudrais+en+savoir+plus+sur+les+services+offerts.&amp;type=phone_number&amp;app_absent=0"
             target='_blank'
           >
-            SOLICITAR ORÇAMENTO
+            Contactez-nous
           </a>
 
           <button
             className="md:hidden text-white focus:outline-none"
-            aria-label="Abrir menu"
+            aria-label="Ouvrir le menu"
             onClick={toggleMenu}
           >
             <svg
@@ -149,7 +149,7 @@ const Header = () => {
                   }}
                 >
                   <a
-                    className="text-white hover:text-[#e69752] transition duration-300 block py-2"
+                    className="text-white hover:text-[#b4000d] transition duration-300 block py-2"
                     href={`#${item.link}`}
                   >
                     {item.name}
@@ -158,11 +158,11 @@ const Header = () => {
               ))}
             </ul>
             <a
-              className="text-xs border border-[#f3d354] hover:bg-[#e69752] hover:font-bold px-4 py-3 rounded-lg transition duration-300 w-full text-center text-white"
-              href="https://api.whatsapp.com/send/?phone=5515996005455&amp;text=Ol%C3%A1%2C+gostaria+de+saber+mais+informa%C3%A7%C3%B5es+sobre+os+servi%C3%A7os+oferecidos.&amp;type=phone_number&amp;app_absent=0"
+              className="text-xs border border-[#b4000d] bg-[#b4000d] hover:bg-[#b4000d] hover:font-bold px-4 py-3 rounded-lg transition duration-300 w-full text-center text-white"
+              href="https://api.whatsapp.com/send/?phone=32467771070&amp;text=Bonjour%2C+je+voudrais+en+savoir+plus+sur+les+services+offerts.&amp;type=phone_number&amp;app_absent=0"
               target='_blank'
             >
-              SOLICITAR ORÇAMENTO
+              Contactez-nous
             </a>
           </nav>
         </div>

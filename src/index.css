@@ -10,3 +10,7 @@
     overflow: hidden;
   }
 }
+.swiper-button-prev,
+.swiper-button-next {
+  color: #ae0101 !important;
+}

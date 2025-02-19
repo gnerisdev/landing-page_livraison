@@ -1,94 +1,89 @@
-import Carousel from 'react-multi-carousel'
-import 'react-multi-carousel/lib/styles.css'
-import slide1 from '../assets/slide1.jpg'
-import slide2 from '../assets/slide2.jpg'
-import slide3 from '../assets/slide3.jpg'
-import slide4 from '../assets/slide4.jpg'
-import slide5 from '../assets/slide5.jpg'
-import slide6 from '../assets/slide6.jpg'
-import slide7 from '../assets/slide7.jpg'
+import { Swiper, SwiperSlide } from 'swiper/react'
+import { Autoplay, Navigation, Pagination } from 'swiper/modules'
+import 'swiper/swiper-bundle.css'
 
-const responsive = {
-  allDevices: {
-    breakpoint: { max: 4000, min: 0 },
-    items: 1,
+const items = [
+  {
+    img: 'https://cdn.abrahao.com.br/base/a0a/472/6c2/ideias-de-delivery.jpg',
+    title: 'Flexibilité des services',
+    text:
+      'Diversifiez vos options avec plusieurs livreurs, garantissant une flexibilité maximale et des délais de livraison optimisés.',
   },
-}
+  {
+    img:
+      'https://omniacontabilidade.com.br/wp-content/uploads/2023/09/3-dicas-para-analisar-os-relatorios-financeiros-da-sua-empresa-e-evite-prejuizos-no-seu-caixa.webp',
+    title: 'Informations complètes',
+    text:
+      'Recevez des rapports détaillés chaque semaine, facilitant le suivi des performances et la prise de décisions éclairées.',
+  },
+  {
+    img:
+      'https://communitylivingwell.co.uk/wp-content/uploads/2021/02/iStock-1226681944-lr-1024x683.jpg',
+    title: 'Assistance rapide',
+    text:
+      "Bénéficiez d'un support client en temps réel, disponible 24h/24 pour résoudre rapidement toutes vos préoccupations.",
+  },
+  {
+    img:
+      'https://www.sistemampa.com.br/wp-content/uploads/2020/05/delivery-motoboy-moto.jpg',
+    title: 'Efficacité dans les livraisons',
+    text:
+      'Profitez de livraisons rapides et efficaces, garantissant la satisfaction de vos clients avec des délais courts.',
+  },
+]
 
-const About = () => (
-  <section id="about" className="py-[64px]">
-    <div className="container mx-auto">
-      <div className="flex flex-col-reverse lg:grid lg:grid-cols-2 gap-8">
-        <div className="flex flex-col justify-between">
-          <h2 className="text-3xl font-bold text-[#e69752] mb-4">
-            Soluções Topográficas Precisas e Confiáveis
+const About = () => {
+  return (
+    <section id="about" className="py-[64px]">
+      <div className="container mx-auto">
+        <div className="flex flex-col">
+          <h2 className="text-3xl font-bold text-white mb-4">
+            Services de Livraison Optimisés
           </h2>
-          <p className="mt-4 text-gray-300 leading-relaxed text-justify hyphens-auto">
-            Somos uma empresa de topografia especializada no ramo de
-            levantamentos topográficos e agrimensura. Formada por profissionais
-            altamente qualificados e experientes, com capacidade de oferecer
-            serviços de qualidade e eficiência. <br /> <br />
-            Nossa empresa atua em diversos segmentos, como construção civil,
-            georreferenciamento de imóveis rurais e urbanos, e medições para
-            projetos ou regularização em Cartórios e Prefeituras, sempre
-            conforme as normas e legislações vigentes.
-          </p>
-          <a href="#history">
-            <button className="w-full mt-8 inline-flex items-center justify-center whitespace-nowrap font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-background hover:text-accent-foreground h-10 text-lg text-white border border-[#e69752] px-4 py-2 rounded-xl hover:font-bold bg-[#e69752] hover:bg-[#f3d354]">
-              Conheça Nossa História
-            </button>
-          </a>
-        </div>
 
-        <div className="flex items-center">
-          <Carousel
-            responsive={responsive}
-            infinite={true}
-            autoPlay={false}
-            autoPlaySpeed={3000}
-            transitionDuration={500}
-            className="w-full rounded-lg"
-          >
-            <img
-              src={slide1}
-              alt="Slide 1"
-              className="w-full h-full max-h-[400px] object-cover"
-            />
-            <img
-              src={slide2}
-              alt="Slide 2"
-              className="w-full h-full max-h-[400px] object-cover"
-            />
-            <img
-              src={slide3}
-              alt="Slide 3"
-              className="w-full h-full max-h-[400px] object-cover"
-            />
-            <img
-              src={slide4}
-              alt="Slide 4"
-              className="w-full h-full max-h-[400px] object-cover"
-            />
-            <img
-              src={slide5}
-              alt="Slide 5"
-              className="w-full h-full max-h-[400px] object-cover"
-            />
-            <img
-              src={slide6}
-              alt="Slide 6"
-              className="w-full h-full max-h-[400px] object-cover"
-            />
-            <img
-              src={slide7}
-              alt="Slide 7"
-              className="w-full h-full max-h-[400px] object-cover"
-            />
-          </Carousel>
+          <div className="flex items-center">
+            <Swiper
+              spaceBetween={30}
+              slidesPerView={1}
+              loop={true}
+              breakpoints={{
+                768: { slidesPerView: 1 },
+                1024: { slidesPerView: 2 },
+              }}
+              navigation={true}
+              modules={[Autoplay, Navigation, Pagination]}
+              className="w-full"
+            >
+              {items.map((item, i) => (
+                <SwiperSlide key={i}>
+                  <div className="relative rounded-[50px] overflow-hidden">
+                    <img
+                      src={item.img}
+                      alt={item.title}
+                      className="filter brightness-50 aspect-square object-cover lg:aspect-auto"
+                    />
+                    <div className="absolute w-full h-full z-20 p-8 lg:p-10 flex flex-col justify-end bottom-0">
+                      <div className="lg:flex lg:justify-between w-full">
+                        <div className="flex flex-col">
+                          <h3 className="text-lg text-white font-medium md:font-bold text-size_9x md:text-size_12x xl:text-size_13x mb-1 md:mb-2 xl:mb-3 tracking-normal leading-height_27x md:leading-height_32x xl:leading-height_36x">
+                            {item.title}
+                          </h3>
+                          <p className="font-maisonBook font-light text-white mb-5 md:mb-6 xl:mb-0">
+                            {item.text}
+                          </p>
+                        </div>
+                        <div className="xl:flex xl:items-end"></div>
+                      </div>
+                    </div>
+                  </div>
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
-)
+    </section>
+  )
+}
 
 export default About

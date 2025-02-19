@@ -1,4 +1,4 @@
-import logo from '../assets/LogoVFM-1.png';
+import logo from '../assets/images/logo-2.png';
 
 const Footer = () => {
   return (
@@ -8,7 +8,7 @@ const Footer = () => {
           <div className="mb-4">
             <a href="/">
               <img
-                alt="VFM Topografia Logo"
+                alt="Livraison Totale Logo"
                 width="150"
                 height="50"
                 decoding="async"
@@ -19,35 +19,35 @@ const Footer = () => {
             </a>
           </div>
           <div className="mb-4">
-            <h4 className="text-lg font-semibold mb-4">A VFM Topografia</h4>
+            <h4 className="text-lg font-semibold mb-4">À Livraison Totale</h4>
             <ul className="space-y-2">
               <li>
                 <a className="hover:text-[#e69752]" href="#about">
-                  Sobre Nós
+                  À propos de nous
                 </a>
               </li>
               <li>
                 <a className="hover:text-[#e69752]" href="#services">
-                  Serviços
+                  Services
                 </a>
               </li>
               <li>
                 <a className="hover:text-[#e69752]" href="#contact">
-                  Entre em contato
+                  Contactez-nous
                 </a>
               </li>
             </ul>
           </div>
           <div>
             <h4 className="text-lg font-semibold mb-4">
-              Siga Nossas Redes Sociais
+              Suivez-nous sur les réseaux sociaux
             </h4>
             <div className="flex flex-col">
               <div className="flex space-x-4 mb-4">
                 <a
                   target="_blank"
                   className="hover:text-[#e69752]"
-                  href="https://www.facebook.com/vfmtopografia/"
+                  href="https://www.facebook.com/livraisontotale/"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -67,7 +67,7 @@ const Footer = () => {
                 <a
                   target="_blank"
                   className="hover:text-[#e69752]"
-                  href="https://www.instagram.com/vfm.topo /"
+                  href="https://www.instagram.com/livraisontotale/"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -91,7 +91,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="mt-8 pt-8 border-t border-[#72645f] text-center">
-          <p className="text-sm">© {new Date().getFullYear()} VFM Topografia & Agrimensura</p>
+          <p className="text-sm">© {new Date().getFullYear()} Livraison Totale</p>
         </div>
       </div>
     </footer>
