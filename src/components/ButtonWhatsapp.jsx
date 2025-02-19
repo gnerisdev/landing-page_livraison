@@ -2,7 +2,7 @@ const ButtonWhatsapp = () => (
   <a
     target="_blank"
     className="z-50 fixed bottom-4 right-6 bg-green-500 text-white p-3 rounded-full shadow-lg hover:bg-green-600 transition-colors"
-    href="https://api.whatsapp.com/send/?phone=324677710705&amp;text=Bonjour%2C+j%27ai+d%C3%A9couvert+votre+site+et+j%27aimerais+en+savoir+plus+sur+vos+services.&amp;type=phone_number&amp;app_absent=0"
+    href="https://api.whatsapp.com/send/?phone=+324677710705&amp;text=Bonjour%2C+j%27ai+d%C3%A9couvert+votre+site+et+j%27aimerais+en+savoir+plus+sur+vos+services.&amp;type=phone_number&amp;app_absent=0"
   >
     <svg
       xmlns="http://www.w3.org/2000/svg"
